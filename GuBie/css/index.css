@@ -1,0 +1,202 @@
+html{
+	font-size: 12px;
+}
+a {
+	text-decoration: none;
+}
+/*顶部区域*/
+.top{
+	background: #f7f7f7;
+	height: 26px;
+	border-bottom: 1px solid #d8d8d8;
+}
+.top .top-page{
+	width: 970px;
+	height: 26px;
+	margin: 0 auto;
+}
+.top .top-page .top-page-l{
+	line-height: 26px;
+	padding-left:  5px;
+}
+.top .top-page .top-page-r ul li{
+	float: left;
+	padding-right: 10px;
+	line-height: 26px;
+}
+.top .top-page .top-page-r ul li a{
+	color: #ff6700;
+}
+.top .top-page .top-page-r ul li s{
+	width: 10px;
+	height: 10px;
+	background-image: url(../img/icon.jpg);
+	display: inline-block;
+	background-position: -430px -136px;
+}
+
+/*logo搜索开始*/
+.logo {
+	width: 970px;
+	height: 98px;
+	margin: 20px auto;
+
+}
+.logo .logo-l {
+	width: 200px;
+	height: 60px;
+	background-image: url(../img/icon.jpg);
+	background-position: -430px -136px;
+	text-indent: -9999px;
+	vertical-align: middle;
+}
+.logo .logo-r{
+	width: 530px;
+	height: 42px;
+	border: 1px solid #c9c9c9;
+	box-sizing: border-box;
+}
+.logo .logopage {
+	margin: 5px 5px 5px 4px;s
+}
+.logo .logo-r .logo-r-t{
+	width: 428px;
+	height: 28px;
+	border: 1px solid #c9c9c9;
+	color: #999999;
+}
+.logo .logo-r .logo-r-r{
+	width: 89px;
+	height: 30px;
+	border: none;
+	color: white;
+	background: blue;
+}
+/*导航*/
+.nav{
+	width: 970px;
+	height: 25px;
+	margin: 0 auto;
+	border-bottom: 2px solid #ff6700;
+}
+.nav ul li{
+	padding: 0 15px 0 15px;
+	line-height: 25px;
+	float: left;
+	font-size: 16px;
+	font-weight: bold;
+}
+.nav ul li a{
+	color: #0266A3;
+}
+.nav ul li:hover{
+	background: #ff6700;
+}
+.nav ul li:hover a{
+	color: white;
+}
+/*广告部分*/
+.banner{
+	width: 970px;
+	height: 210px;
+	margin: 0 auto;
+	margin-top: 10px
+}
+.subnav{
+	width: 200px;
+	height: 210px;
+	margin-right: 11px;
+}
+.subnav h2{
+	background:  #0266A3;
+	color: white;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 20px;
+}
+.subnav ul{
+	background: #EBF0F6;
+	height: 180px;
+}
+.subnav li{
+	font-size: 12px;
+	padding-top: 12px;
+	margin-left: 15px;
+}
+.subnav li s{
+	width: 13px;
+	height: 13px;
+	background-image: url(../img/icon.jpg);
+	background-position: -451px -258px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.subnav li a{
+	padding-left: 15px;
+}
+.ad{
+	width: 520px;
+	height: 210px;
+	background: green;
+}
+.message{
+	width: 230px;
+	height: 210px;
+}
+.message .message-top{
+	height: 95px;
+	border: 1px solid #DDDDDD;
+	background: #F7FAFF;
+	margin-bottom: 22px;
+	box-sizing: border-box;
+}
+.message-top .messagepage1{
+	padding: 10px 0px 5px 20px;
+	font-weight: bold;
+}
+.message-top  s{
+	width: 40px;
+	height: 40px;
+	background-image: url(../img/b1.jpg);
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+	display: inline-block;
+	margin-left: 15px;
+}
+.message-top .messagepage2{
+	font-weight: bold;
+	font-size: 11px;
+	margin-top: 10px;
+}
+.message .message-botton{
+	height: 92px;
+	border: 1px solid #DDDDDD;
+	box-sizing: border-box;
+	background: #F7F7F7;
+}
+.bottonpage1{
+	font-weight: bold;
+	font-size: 13px;
+	padding: 10px 10px 10px 40px;
+}
+.message .message-botton s{
+	width: 12px;
+	height: 12px;
+	background-image: url(../img/b2.jpg);
+	background-repeat: no-repeat;
+	background-size: 12px 12px;
+	margin-left: 50px;
+}
+.bottonpage2{
+	font-size: 12px;
+	font-weight: bold;
+	padding-top: 5px;
+}
+.bottonpage3{
+	margin-left: 60px;
+	width: 100px;
+	height: 20px;
+	background: #ff6700;
+}
