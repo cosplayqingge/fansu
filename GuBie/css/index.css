@@ -200,3 +200,197 @@ a {
 	height: 20px;
 	background: #ff6700;
 }
+/*中间线部分*/
+.propty{
+	width: 970px;
+	height: 30px;
+	margin: 0 auto;
+	background: #f7f7f7;
+	border: 1px solid #DDDDDD;
+	line-height: 30px;
+	padding-left: 20px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	font-size: 13px;
+	font-weight: bold;
+}
+ /*内容部分开始*/
+.pop{
+	width: 970px;
+	height: 345px;
+	border: 1px solid #ccc;
+	margin: 0 auto;
+	margin-top: 12px;
+}
+.pop .pop-left{
+	width: 729px;
+	height: 345px;
+}
+.pop-l-top{
+	width: 729px;
+	height: 170px;
+	padding: 17px 0 0 26px;
+	box-sizing: border-box;
+}
+
+.pop-z-z{
+	width: 729px;
+	height: 5px;
+	background: gray;
+}
+.pop-l-botton{
+	width: 729px;
+	height: 170px;
+}
+.pop .pop-right{
+	width: 230px;
+	height: 345px;
+	background: #F7F7F7;
+	border: 1px solid #F7F7F7;
+}
+
+.pop-right h2{
+	font-weight: bold;
+	font-size: 17px;
+	padding: 5px 0px 6px 10px;
+	height: 21px;
+	background: gray;
+	border-bottom: 1px solid #ff6700;
+}
+.pop-right ul li {
+	padding: 5px 0px 5px 35px;
+	font-weight: bold;
+}
+.pop-right ul li a{
+	padding-left: 10px;
+}
+.pop-right ul li span{
+	border-radius: 50%;
+	background: black;
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+}
+
+/*友情链接*/
+.boot{
+	width: 970px;
+	height: 20px;
+	font-size: 16px;
+	font-weight: bold;
+	background: #ff6700;
+	color: black;
+	margin: 0 auto;
+	padding-left: 20px;
+	margin-top: 10px;
+	box-sizing: border-box;
+}
+/*下部分广告开始*/
+.vool{
+	width: 970px;
+	height: 345px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.vool .vool-l{
+	width: 729px;
+	height: 345px;
+}
+.vooll{
+	width: 729px;
+	height: 25px;
+	border-bottom: 2px solid black;
+}
+.vooll .mk{
+	width: 70px;
+	height: 25px;
+	line-height: 25px;
+	padding-left: 10px;
+	border-radius: 30px 40px 10px 0px;
+	background: #ff6700;
+	color: blue;
+}
+.vooll .jk a{
+	height: 25px;
+	line-height: 25px;
+	color: red;
+}
+.voolr{
+	height: 320px;
+	border:1px solid #ccc;
+	border-top: none;
+	box-sizing: border-box;
+}
+.voolr img{
+	width: 167px;
+	height: 200px;
+	padding: 5px 8px 5px 5px; 
+}
+.voolr .ct{
+	padding-left: 22px;
+	font-weight: bold;
+}
+.voolr .cl{
+	padding-left: 22px;
+}
+.voolr .cj{
+	padding-left: 25px;
+}
+.vool .vool-r{
+	width: 230px;
+	height: 345px;
+}
+.vool .vool-r img{
+	margin-top: 26px;
+	width: 232px;
+	height: 320px;
+}
+ /*友情链接部分开始*/
+.fg{
+	width: 970px;
+	height: 100px;
+	line-height: 40px;
+	margin: 0 auto;
+	border-bottom: 3px solid #ccc;
+}
+.fg .vv{
+	padding-left: 20px;
+	font-weight: bold;
+	color: black;
+}
+.fg .ww{
+	padding-left: 10px;
+	color: blue;
+}	
+
+/*底部 */
+.hh{
+	width: 970px;
+	height: 91px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.hh .ff{
+	padding-left: 340px;
+}
+.hh .ff a{
+	font-weight: bold;
+	color: red;
+	font-size: 15px;
+}
+.hh .jj{
+	margin-top: 10px;
+	padding-left: 283px;
+}
+.hh .jj a{
+	color: black;
+	font-size: 16px;
+}
+.hh .rr{
+	margin-top: 10px;
+	padding-left: 369px;
+}
+.hh .rr a{
+	color: #ff6700;
+	font-weight: bolder;
+}

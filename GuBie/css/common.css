@@ -14,3 +14,61 @@
 .clearfix{
 	*zoom:1;
 }
+
+/*内容通用*/
+.pop-l-top  .kl {
+	width: 99px;
+	height: 143px;
+	padding-right: 10px;
+}
+.pop-l-top .kl .my{
+	width: 99px;
+	height: 120px;
+	background-image: url(../img/b1.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center center;
+}
+.pop-l-top .kl .kl-b{
+	width: 99px;
+	height: 22px;
+	line-height: 20px;
+	text-align: center;
+	border: 1px solid #0266A3;
+	box-sizing: border-box;
+	background: #0266A3;
+}
+.pop-l-top .kl .kl-b a{
+	color: white;
+}
+.pop-l-top .kt-p .oo{
+	padding:0px  0px 15px 10px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #0266A3;
+}
+.pop-l-top .kt-p .bb{
+	padding: 10px 0 10px 12px;
+	font-weight: bold;
+	font-size: 12px;
+	background: #fff;
+}
+.pop-l-top .kt-p .ll{
+	padding: 5px 0 10px 12px;
+	font-weight: bold;
+	font-size: 14px;
+	color: red;
+	display: block;
+}
+.pop-l-top .kt-p .ff{
+	padding-left: 10px;
+	font-size: 15px;
+	font-weight: bold;
+}
+.pop-l-top .kt-p .ff span{
+	color: red;
+}
+.pop-l-top .pop-l-y{
+	width: 350px;
+	height: 146px;
+}
