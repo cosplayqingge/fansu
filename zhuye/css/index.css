@@ -1,0 +1,171 @@
+/*body{
+	width: 1366px;
+}*/
+/*顶部部分*/
+.top{
+	/*width: 1366px;*/
+	height: 40px;
+	background: #333333;
+}
+.top-vv{
+	width: 1266px;
+	height: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*左边部分*/
+.top-l{
+	width: 381px;
+	height: 40px;
+}
+.top-l .top-lp{
+	line-height: 40px;
+}
+.top-l .top-lp a:hover{
+	color: white;
+}
+.top-l .top-lp span{
+	font-size: 10px;
+	padding: 0px 5px 0px 5px;
+	color: #42423B;
+}
+/*右边部分*/
+.top-r{
+	width: 296px;
+}
+.top-r .top-rr .top-rl{
+	line-height: 40px;
+	padding-left: 10px;
+}
+.top-r .top-rr .top-rl span{
+	font-size: 10px;
+	padding: 0px 5px 0px 5px;
+	color: #42423B;
+}
+.top-r .top-rr .top-rl a:hover{
+	color: white;
+}
+.top-r .top-mm{
+	width: 120px;
+	height: 40px;
+	background: #424242;
+}
+.top-r .top-mm i{
+	font-size: 15px;
+	color: #A8B0B0;
+	padding-left: 25px;
+	line-height: 40px;
+	text-align: center;
+}
+.top-r .top-mm:hover{
+	background: white;
+	color: #ff6700;
+}
+.top-r .top-mm:hover a{
+	color: #ff6700;
+}
+.top-r .top-mm a:hover .jk{
+	color: #ff6700;
+}
+
+
+/*搜索部分开始*/
+.input{
+	width: 1266px;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.input-t{
+	width: 55px;
+	height: 50px;
+	margin-top: 25px;
+}
+.input-t img{
+	width: 55px;
+	height: 50px;
+}
+.input-u{
+	width: 620px;
+	height: 50px;
+	margin-left: 180px;
+	margin-top: 25px;
+}
+.input-u .input-uu{
+	font-size: 14px;
+	line-height: 50px;
+	padding-left: 22px;
+}
+.input-u .input-uu a{
+	color: #333359;
+}
+.input-u .input-uu a:hover{
+	color: #ff6700;
+}
+.input-m{
+	width: 296px;
+	height: 50px;
+	margin-top: 25px;
+	position: relative;
+}
+.input-mm{
+	width: 244px;
+	height: 50px;
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box; 
+}
+.input-mm:hover{
+	border-color: #999;
+}
+.input-mm:hover + .input-mk{
+	border-color: #999;
+}
+.input-mk{
+	width: 52px;
+	height: 50px;
+	border:1px solid #E0E0E0;
+	border-left: none;
+	box-sizing: border-box;
+}
+.input-mk:hover{
+	background: #ff6700;
+}
+.input-mk:hover .input-mj{
+	color: white;
+}
+.input-mk .input-mj{
+	line-height: 50px;
+	padding-left: 16px;
+	color: #616161;
+	font-size: 19px;
+	cursor: pointer;
+}
+.input-ml{
+	position: absolute;
+	right: 70px;
+	top: 18px;
+}
+.input-ml .kl{
+	width: 65px;
+	height: 18px;
+	background: #EEEEEE;
+	color: #757575;
+	margin-right: 5px;
+}
+.input-ml .kl:hover{
+	background: #ff6700;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
