@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>003-轮播图.html</title>
+<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+		.carousel{
+			width: 1226px;
+			height: 460px;
+			position: relative;
+			margin: 100px auto;
+		}
+		.carousel .carousel-imgs-item{
+			position: absolute;
+			top:0;
+			left:0;
+			height: 100%;
+			transition: all 0.5s;
+		}
+		.carousel .arrow{
+			position: absolute;
+			top:50%;
+			z-index: 888;
+			width: 40px;
+			height: 80px;
+			line-height: 80px;
+			margin-top: -40px;
+			font-size: 30px;
+			font-weight: bold;
+			color: #eee;
+			text-align: center;
+			cursor: pointer;
+			user-select: none;
+		}
+		.carousel .arrow:hover{
+			background: rgba(0,0,0,0.4);
+		}
+		.carousel .left-arrow{
+				left:0px;
+		}
+		.carousel .right-arrow{
+				right:0;
+		}
+		.carousel .carousel-imgs-item img{
+			width: 100%;
+			height: 460px;
+		}
+		.carousel .carousel-btn{
+			position: absolute;
+			bottom: 24px;
+			right: 35px;
+			z-index: 888;
+		}
+		.carousel .carousel-btn li{
+			float: left;
+			width: 5px;
+			height: 5px;
+			border: 4px solid #b5b3ad;
+			margin-left: 10px;
+			background: #96938a;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		.carousel .carousel-btn li:hover,
+		.carousel .carousel-btn li.active{
+			border-color: #979590;
+			background: #fcf9f0;
+		}		
+	</style>
+</head>
+<body>
+	<div class="carousel">
+		<ul class="carousel-imgs">
+			<li class="carousel-imgs-item" style="z-index: 99;"><img src="images/b1.jpg" alt=""></li>
+			<li class="carousel-imgs-item"><img src="images/b2.jpg" alt=""></li>
+			<li class="carousel-imgs-item"><img src="images/b3.jpg" alt=""></li>
+		</ul>
+		<span class="arrow left-arrow">&lt;</span>
+		<span class="arrow right-arrow">&gt;</span>
+		<ul class="carousel-btn">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>	
+</body>
+<script>
+	var aImg = document.querySelectorAll('.carousel-imgs-item');
+	var aLeftArrow = document.querySelector('.left-arrow');
+	var aRightArrow = document.querySelector('.right-arrow');
+	var aBtn = document.querySelector('.carousel-btn').children;
+
+	var oCarousel = document.querySelector('.carousel')
+
+	//定时器
+	var timer = 0;
+
+	var now = 0;
+	aRightArrow.onclick = function(){
+		now++;
+		if(now >= aImg.length){
+			now = 0;
+		}
+		tab();
+	}
+
+	aLeftArrow.onclick = function(){
+		now--;
+		if (now < 0) {
+			now  =  aImg.length - 1;
+		}
+		tab();
+	}
+
+//公共函数
+ 	function tab(){
+ 		for(var i = 0;i<aImg.length;i++){
+			aImg[i].style.zIndex  = '0';
+			aImg[i].style.opacity  = '0';
+			aBtn[i].className = '';
+		}
+		aImg[now].style.zIndex = '99';
+		aImg[now].style.opacity  = '1';
+		aBtn[now].className = 'active';
+ 	}
+
+//按钮	
+	for(var i=0;i<aBtn.length;i++){
+		aBtn[i].index = i;
+		aBtn[i].onclick=function(){
+			now = this.index;
+			tab();
+		}
+	}
+	timer = setInterval(aRightArrow.onclick,1000)
+	oCarousel.onmouseover = function(){
+		clearInterval(timer)
+	}
+	oCarousel.onmouseout = function(){
+		timer = setInterval(aRightArrow.onclick,1000)z
+	}
+
+
+
+
+
+
+</script>
+</html>
