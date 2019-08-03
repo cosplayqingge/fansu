@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+ 
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style type="text/css">
+            body {
+                margin: 0;
+                padding: 0;
+            }
+ 
+            .pClass {
+                border: 100px solid ;
+                border-color: white white black black;      
+                width: 0;
+                height: 0;
+                border-radius: 100%;
+                position: absolute;
+                top: 100px;
+                left: 100px;
+                transform-origin: 50% 50%;       /*设置以中心为原点进行旋转*/
+              animation: run 2.5s linear infinite;  /*执行动画run，每次执行时间为2.5s ,从开头到结尾以相同的速度来播放动画，重复播放*/
+                box-shadow: 0 0 50px #707070;
+            }
+            @keyframes run{
+                from{
+                    transform: rotate(0deg);
+                }
+                /*50%{
+                    transform: rotate(180deg);
+                }*/
+                to{
+                    transform: rotate(360deg);
+                }
+            }
+ 
+            .pClass:before {
+                content: "";
+                position: absolute;
+                top: -85px;
+                left: -85px;
+                width: 100px;
+                height: 100px;
+                background-color: black;
+                border-radius: 100%;
+            }
+            .pClass:after {
+                content: "";
+                position: absolute;
+                top: -15px;
+                left: -14px;
+                width: 100px;
+                height: 100px;
+                background-color: white;
+                border-radius: 100%;
+            }
+            .left{
+                background-color:white;
+                width:50px;
+                height: 50px;
+                position: relative;
+                border-radius: 100%;
+                top: 132px;
+                left: 135px;
+            }
+            .right{
+                background-color:black;
+                width:50px;
+                height: 50px;
+                position: relative;
+                border-radius: 100%;
+                top: 140px;
+                left: 217px;
+                z-index: 1;    /*若是不设置的话，父元素的after会覆盖这部分内容*/
+            }
+        </style>
+    </head>
+ 
+    <body>
+        <p id="" class="pClass">
+            <p id="" class="left">
+            </p>
+            <p id="" class="right">
+            </p>
+        </p>
+    </body>
+</html>
