@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>015-图片.html</title>
+	<style>
+		body{
+			background: black;
+		}
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.tab-wrap{
+			margin: 100px auto;
+			width: 600px;
+			box-shadow: 0 0 40px white;
+			border-radius: 5%;
+		}
+		.tab-wrap ul:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.tab-wrap ul li{
+			float: left;
+			width: 150px;
+			height: 150px;
+			list-style: none;
+			margin: 25px;
+			border-radius: 12%;
+			background-size: 150px 150px;
+
+		}
+		.tab-wrap ul li:hover{
+			box-shadow: 10px 10px 10px white;
+			animation: move 1s;
+		}
+		.tab-wrap ul .pic_1{
+			background-image: url(images/1.jpg);
+		}
+		.tab-wrap ul .pic_2{
+			background-image: url(images/2.jpg);
+		}
+		.tab-wrap ul .pic_3{
+			background-image: url(images/3.jpg);
+		}
+		.tab-wrap ul .pic_4{
+			background-image: url(images/4.jpg);
+		}
+		.tab-wrap ul .pic_5{
+			background-image: url(images/5.jpg);
+		}
+		.tab-wrap ul .pic_6{
+			background-image: url(images/6.jpg);
+		}
+		.tab-wrap ul .pic_7{
+			background-image: url(images/7.jpg);
+		}
+		.tab-wrap ul .pic_8{
+			background-image: url(images/8.jpg);
+		}
+		.tab-wrap ul .pic_9{
+			background-image: url(images/9.jpg);
+		}
+		@keyframes move{
+			0%{
+				transform: scale(1,1);
+			}
+			25%{
+				transform: scale(1.30,0.75);
+			}
+			50%{
+				transform: scale(0.8,1.2);
+			}
+			75%{
+				transform: scale(1.15,0.85);
+			}
+			100%{
+				transform: scale(1,1);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="tab-wrap">
+		<ul>
+			<li class="pic_1"></li>
+			<li class="pic_2"></li>
+			<li class="pic_3"></li>
+			<li class="pic_4"></li>
+			<li class="pic_5"></li>
+			<li class="pic_6"></li>
+			<li class="pic_7"></li>
+			<li class="pic_8"></li>
+			<li class="pic_9"></li>
+		</ul>
+
+
+
+
+
+
+	</div>
+</body>
+</html>
