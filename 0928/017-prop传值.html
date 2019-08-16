@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>017-prop传值.html</title>
+</head>
+<body>
+	<div id="app">
+		<ul>
+			<li>11</li>
+			<tood-dom
+				v-for="(item,index) in items"
+				:task="item.task"
+				:id="item.id"
+				:key="index"
+			></tood-dom>
+		</ul>
+	</div>
+</body>
+<script src="js/vue.js"></script>
+<script>
+	Vue.component('tood-dom',{
+		// data(){
+
+		// },
+		props:{
+			id:Number,
+			task:String
+		},
+		template:"<li>{{id}}-{{task}}</li>"
+	});
+	let vm = new Vue({
+		el:"#app",
+		data:{
+			items:[
+				{
+					id:1,
+					task:"吃饭",
+				},
+				{
+					id:2,
+					task:"睡觉",
+				}
+			]
+		},
+
+	})
+</script>
+</html>

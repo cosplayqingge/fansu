@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>020-简易计算器.html</title>
+</head>
+<body>
+	<div id="app">
+		<input type="text" v-model="n1">
+		<select v-model="opt">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+		</select>
+		<input type="text" v-model="n2">
+
+		<input type="button" value="=" @click="click">
+		<input type="text" v-model="result">
+	</div>
+</body>
+<script src="js/vue.js"></script>
+<script>
+	let vm = new Vue({
+		el:"#app",
+		data:{
+			n1:0,
+			n2:0,
+			result:0,
+			opt:"+"
+		},
+		methods:{
+			click(){
+				switch(this.opt){
+					case "+":
+						this.result = parseInt(this.n1) + parseInt(this.n2)
+					break;
+					case "-":
+						this.result = parseInt(this.n1) - parseInt(this.n2)
+					break;
+					case "*":
+						this.result = parseInt(this.n1) * parseInt(this.n2)
+					break;
+					case "/":
+						this.result = parseInt(this.n1) / parseInt(this.n2)
+					break;
+				}
+			}
+		}
+	});
+</script>
+</html>

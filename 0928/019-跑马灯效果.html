@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>019-跑马灯效果.html</title>
+</head>
+<body>
+	<div id="app">
+		<input type="button" value="开始" @click="lang">
+		<input type="button" value="结束" @click="stop">
+		<h4>{{ msg }}</h4>
+	</div>
+</body>
+<script src="js/vue.js"></script>
+<script>
+	let vm = new Vue({
+		el:"#app",
+		data:{
+			msg:"来路风尘仆仆，毕竟神明不度众生苦",
+			timer: null
+		},
+		methods:{
+			lang(){
+				if (this.timer != null) return;
+
+          this.timer = setInterval(() => {
+            var start = this.msg.substring(0, 1)
+            // 获取到 后面的所有字符
+            var end = this.msg.substring(1)
+            // 重新拼接得到新的字符串，并赋值给 this.msg
+            this.msg = end + start
+          }, 400)
+			},
+			stop(){
+				clearInterval(this.timer)
+				this.timer = null;
+			}
+		}
+	})
+
+
+
+
+
+
+
+
+
+</script>
+</html>

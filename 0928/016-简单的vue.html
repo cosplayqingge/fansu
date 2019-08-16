@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>016-简单的vue.html</title>
+</head>
+<body>
+	<div id="app">
+		<h1>山河</h1>
+		<span>序号</span>: <input type="text" v-model="id">
+		<span>名字</span>: <input type="text" v-model="name">
+		<button @click="add()">添加</button>
+		<table>
+			<thead>
+				<th>序号</th>
+				<th>品牌</th>
+				<th>时间</th>
+				<th>操作</th>
+			</thead>
+			<tbody>
+				<tr v-for="(item, index) in list" :key="index">
+					<td>{{ item.id }}</td>
+					<td>{{ item.name }}</td>
+					<td>{{ item.ctime }}</td>
+					<td>
+						<a href="javascript:;"  @click="del(index)">删除</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+<script src="js/vue.js"></script>
+<script>
+	let vm = new Vue({
+		el:'#app',
+		data:{
+			list: [
+				{id:1, name:"奔驰", ctime: new Date().toISOString()},
+				{id:2, name:"宝马", ctime: new Date().toISOString()},
+				{id:3, name:"兰博基尼", ctime: new Date().toISOString()},
+				{id:4, name:"迈巴赫", ctime:new Date().toISOString() },
+			],
+			id: "",
+			name : ""
+		},
+		methods: {
+			add: function(){
+				var newData = {id: this.id,name : this.name,ctime : new Date().toISOString() };
+				this.list.push(newData);
+				this.id = '',
+				this.name = ''
+			},
+			del: function(index){
+				this.list.splice(index,1)
+			}
+		}
+	});
+</script>
+</html>
