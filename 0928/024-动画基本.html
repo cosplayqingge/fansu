@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>024-动画基本.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="app">
+		<input type="button" value="点击" @click="flag=!flag">
+		<h3 v-if="flag">这是一个标签</h3>
+	</div>
+</body>
+<script src="js/vue.js"></script>
+<script>
+	let vm = new Vue({
+		el:"#app",
+		data:{
+			flag:false
+		}
+	})
+</script>
+</html>

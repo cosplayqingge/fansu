@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>025-动画基本1.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		/*起始状态*/
+		 .v-enter,
+   		 .v-leave-to {
+     		 opacity: 0;
+     		 transform: translateX(150px);
+    	}
+		/* v-enter-active 【入场动画的时间段】 */
+    /* v-leave-active 【离场动画的时间段】 */
+    	.v-enter-active,
+    	.v-leave-active{
+      		transition: all 0.8s ease;
+  		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<input type="button" value="点击" @click="flag=!flag">
+		<transition>
+			<h3 v-if="flag">这是一个标签</h3>
+		</transition>
+	</div>
+</body>
+<script src="js/vue.js"></script>
+<script>
+	let vm = new Vue({
+		el:"#app",
+		data:{
+			flag:false
+		}
+	})
+</script>
+</html>
