@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>028-创建组建的方法二.html</title>
+</head>
+<body>
+	<div id="app">
+		<mycom1></mycom1>
+		<login></login>
+	</div>
+	
+	<template id="templ">
+		<div>
+			<h4>lallal</h4>
+			<h1>好用的</h1>
+		</div>
+		
+	</template>
+
+	<template id="tmpl2">
+    	<h1>这是私有的 login 组件</h1>
+  	</template>
+</body>
+<script src="js/vue.js"></script>
+<script>
+	 Vue.component('mycom1', {
+      template: '#templ'
+    })
+	let vm = new Vue({
+		el:"#app",
+		data:{
+
+		},
+		components: { // 定义实例内部私有组件的
+        login: {
+          template: '#tmpl2'
+        }
+      }
+	})
+</script>
+</html>

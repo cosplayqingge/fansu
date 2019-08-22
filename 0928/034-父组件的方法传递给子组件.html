@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>034-父组件的方法传递给子组件.html</title>
+</head>
+<body>
+	<div id="app">
+		<coo1 @func="show"></coo1>		
+	</div>
+
+	<template id="tmp1">
+		<div>
+			<h2>这是子组件</h2>
+			<input type="button" value="子组件的按钮触发父组件的方法" @click="myshi">
+		</div>
+	</template>
+</body>
+<script src="js/vue.js"></script>
+<script>
+
+	var coo1 = {
+		template:"#tmp1",
+		data(){
+			return {
+				somemsg:{name:"山河",age:12}
+			}
+			
+		},
+		methods:{
+			myshi(){
+				//console.log('ok')
+				this.$emit('func',this.somemsg)
+			}
+		}
+	}
+
+	let vm = new Vue({
+		el:"#app",
+		data:{
+			msg:"aa",
+			dispmsg:null
+		},
+		methods:{
+			show(data){
+				// alert("调用父组件的方法--" + data)
+				console.log(this.dispmsg = data);
+			}
+		},
+		components:{
+			coo1
+		}
+	})
+</script>
+</html>

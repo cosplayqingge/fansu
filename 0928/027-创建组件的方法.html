@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>027-创建组件的方法.html</title>
+</head>
+<body>
+	<div id="app">
+		<my-cool></my-cool><!--用驼峰命名法的时候中间用 ——— 来代替组建名称 -->
+	</div>
+</body>
+<script src="js/vue.js"></script>
+<script>
+	//方法一
+	// var com1 = Vue.extend({
+	// 	template:'<h3>这是创建的组建</h3>'//通过template属性来指定组建html展示的内容
+	// })
+	// //2.使用Vue.component('组建名称'，创建出来的组建模板对象)
+	// Vue.component('myCool',com1)
+
+	//方法二
+	Vue.component('myCool',Vue.extend({
+		template:'<h3>这是创建的组建</h3>'
+	}))
+
+
+	let vm = new Vue({
+		el:"#app",
+		data:{
+
+		}
+	})
+</script>
+</html>

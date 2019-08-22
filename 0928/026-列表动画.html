@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>026-列表动画.html</title>
+	<style>
+		li{
+			border:1px dashed #ff6700;
+			margin: 5px;
+			border-radius: 12%;
+		}
+		 li:hover {
+     		 background-color: hotpink;
+      		transition: all 0.8s ease;
+  		 }
+		.v-enter,
+	    .v-leave-to {
+	      opacity: 0;
+	      transform: translateY(80px);
+	    }
+
+	    .v-enter-active,
+	    .v-leave-active {
+	      transition: all 0.6s ease;
+	    }
+
+	</style>
+</head>
+<body>
+	<div id="app">
+		id:
+		<input type="text" v-model="id">
+		name:
+		<input type="text" v-model="name">
+		<input type="button" value="添加" @click="add">
+		
+			<transition-group>
+				<li v-for="(item,index) in list" :key="item.id" @click="del(index)">
+				{{item.id}} -- {{item.name}}
+				</li>
+			</transition-group>
+		
+	</div>
+</body>
+<script src="js/vue.js"></script>
+<script>
+	let vm = new Vue({
+		el:"#app",
+		data:{
+			id:'',
+			name:'',
+			list:[
+				{ id:1,name:"山河"},
+				{ id:2,name:"众生"},
+				{ id:3,name:"凡俗"},
+				{ id:4,name:"星河"}
+			]
+		},
+		methods:{
+			add(){
+				this.list.push({id:this.id,name:this.name});
+				this.id = '',
+				this.name = ''
+			},
+			del(index){
+				this.list.splice(index,1)
+			}
+		}
+	})
+</script>
+</html>

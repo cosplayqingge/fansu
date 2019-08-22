@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>029-组建中的data.html</title>
+</head>
+<body>
+	<div id="app">
+		<mycool></mycool>
+	</div>
+	<template id="kl">
+		<div>
+			<h1>我好想你</h1>
+		</div>
+	</template>
+</body>
+<script src="js/vue.js"></script>
+<script>
+	Vue.component('mycool',{
+		template:'<h1>我好想你..{{msg}} </h1>',
+		data:function(){
+			return {
+				msg:"你回来吧 我。。。。"
+			}
+		}
+	})
+
+
+
+
+
+
+	let vm = new Vue({
+		el:"#app",
+		data:{},
+		methods:{}
+	})
+</script>
+</html>
