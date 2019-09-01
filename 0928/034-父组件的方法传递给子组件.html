@@ -29,7 +29,7 @@
 		},
 		methods:{
 			myshi(){
-				//console.log('ok')
+				console.log('ok')
 				this.$emit('func',this.somemsg)
 			}
 		}
@@ -43,8 +43,10 @@
 		},
 		methods:{
 			show(data){
-				// alert("调用父组件的方法--" + data)
-				console.log(this.dispmsg = data);
+				console.log("调用父组件的方法--" + data);
+
+				this.dispmsg = data;
+				console.log(data.name)
 			}
 		},
 		components:{
