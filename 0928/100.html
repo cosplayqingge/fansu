@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+.aa{
+	margin-left: 50px;
+	font-size: 20px;
+}
+
+.tab-list{
+	margin-left: 200px;
+	width: 500px;
+	height: 100px;
+}
+.tab-list li{
+	width: 40px;
+	line-height: 30px;
+	cursor: pointer;
+	margin-right: 21px;
+}
+.koll{
+	color: #ff6700;
+	border-bottom: 1px solid #ff6700;
+}
+
+
+.box-oo{
+	margin-left: 50px;
+	margin-top: 10px;
+	color: #ff6700;
+}
+.tab-container{
+	margin-top: 20px;
+	margin-left: 150px;
+}
+.tab-container li{
+	display: none;
+	width: 300px;
+	height: 300px;
+	line-height: 300px;
+	border: 1px solid #000;
+	font-size: 60px;
+	text-align: center;
+}
+
+	</style>
+</head>
+<body>
+	<div class="button clearfix">
+		<div class="box">
+			<p class="aa">选择城市:</p>
+			<ul class="tab-list clearfix">
+				<li class="koll left son">北京</li>
+				<li class="left son">上海</li>
+				<li class="left son">深圳</li>
+				<li class="left son">郑州</li>
+				<li class="left son">苏州</li>
+				<li class="left son">广州</li>
+				<li class="left son">重庆</li>
+				<li class="left son">成都</li>
+				<li class="left son">南京</li>
+				<li class="left son">漯河</li>
+				<li class="left son">广西</li>
+				<li class="left son">云南</li>
+				<li class="left son">澳门</li>
+				<li class="left son">香港</li>
+				<li class="left son">濮阳</li>
+				<li class="left son">焦作</li>
+			</ul>
+			<p class="box-oo">平安教育北京分公司</p>
+			<ul class="tab-container">
+				<li style="display: block;">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+				<li>10</li>
+				<li>11</li>
+				<li>12</li>
+				<li>13</li>
+				<li>14</li>
+				<li>15</li>
+				<li>16</li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script>
+		var oBtn = document.querySelectorAll('.tab-list li');
+	var aConcat = document.querySelectorAll('.tab-container li');
+	for(let i = 0;i<oBtn.length;i++){
+		oBtn[i].onclick = function(){
+			for(let j = 0;j<oBtn.length;j++){
+				oBtn[j].className = 'left son';
+				aConcat[j].style.display = 'none';
+			}
+			this.className = 'left son koll';
+			aConcat[i].style.display = 'block'; 
+		}
+	}
+
+</script>
+</html>
