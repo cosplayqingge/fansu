@@ -10,11 +10,7 @@ a{
 li{
 	list-style: none;
 }
-.container{
-	width: 1226px;
-	margin-left: auto;
-	margin-right: auto;
-}
+
 .clearfix:after{
 	display: block;
 	clear: both;
@@ -176,16 +172,23 @@ li{
 	font-size: 20px;
 }
 
+
+
+
+
 .tab-list{
 	margin-left: 200px;
-	width: 500px;
-	height: 100px;
+	width: 600px;
+
 }
 .tab-list li{
-	width: 40px;
-	line-height: 30px;
-	cursor: pointer;
-	margin-right: 21px;
+	width: 60px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	margin-right: 14px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
 }
 .koll{
 	color: #ff6700;

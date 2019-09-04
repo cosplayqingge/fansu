@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>038-路由的嵌套.html</title>
+</head>
+<body>
+	<div id="app">
+		<router-link to="/account">点击</router-link>
+		<router-link to="/look">另一个</router-link>
+
+
+
+		<router-view></router-view>
+	</div>
+
+
+	<template id="tmpl">
+		<div>
+			<h1>这是Account 的组件</h1>
+			<router-link to="/account/logon">登陆</router-link>
+			<router-link to="/account/register">注册</router-link>
+			
+
+			<router-view></router-view>
+		</div>
+	</template>
+	<template id="tmp2">
+		<div>
+			<h1>这是另一个 的组件</h1>
+		</div>
+	</template>
+</body>
+<script src="js/vue.js"></script>
+<script src="js/vue-router-3.0.1.js"></script>
+<script>
+	var account = {
+		template:"#tmpl"
+	}
+	var look = {
+		template:"#tmp2"
+	}
+	var logon = {
+		template:"<h1>登陆</h1>"
+	}
+	var register = {
+		template:"<h1>注册</h1>"
+	}
+	var router =new VueRouter({
+		routes:[
+			{path:'/account',component:account,
+			children:[
+				{path:'logon',component:logon},
+				{path:'register',component:register}
+				]
+		},
+			{path:'/look',component:look}
+		]
+	})
+	var vm = new Vue({
+		el:"#app",
+		data:{},
+		methods:{},
+		router:router
+	})
+</script>
+</html>

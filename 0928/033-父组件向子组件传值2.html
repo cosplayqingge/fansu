@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>033-父组件向子组件传值2.html</title>
+</head>
+<body>
+	<div id="app">
+		<cool v-bind:passmsg="msg"></cool>
+	</div>
+	<template id="tmpl">
+		<div>
+			<h1 @click="change">子组件--{{ passmsg }}</h1>
+		</div>
+	</template>
+</body>
+<script src="js/vue.js"></script>
+<script>
+	var cool ={
+		template:"#tmpl",
+		data(){
+			return {
+				title:"123",
+				conent:'qqq'
+			}
+		},
+		methods:{
+			change(){
+				this.passmsg = '被修改l'
+			}
+		},
+		props:["passmsg"]
+	}
+	var vm = new Vue({
+		el:"#app",
+		data:{
+			msg:"我是父组件"
+		},
+		methods:{},
+		components:{
+			cool
+		}
+	})
+</script>
+</html>

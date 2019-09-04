@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>041-复习父子组件传值.html</title>
+</head>
+<body>
+	<div id="app">
+		<cool v-bind:passmsg="msg" @func="show"></cool>
+	</div>
+	<template id="tmpl">
+		<div>
+			<h1>这是子元素 -- {{ passmsg }}</h1>
+			<input type="button" value="点击调用父组件的方法" @click="myclick">
+		</div>
+	</template>
+</body>
+<script src="js/vue.js"></script>
+<script src="js/vue-router-3.0.1.js"></script>
+<script>
+	var cool = {
+		template:"#tmpl",
+		data(){
+			return {
+				some:{name:"山河",age:18}
+			}
+		},
+		methods:{
+			myclick(){
+				this.$emit('func',this.some)
+			}
+		},
+		props:['passmsg']
+	}
+	var vm = new Vue({
+		el:"#app",
+		data:{
+			msg:"来路风尘仆仆",
+			passlook:null
+		},
+		methods:{
+			show(data){
+				console.log('这里是父组件的方法--' + data)
+				console.log(data)
+				this.passlook = data;
+				console.log(this.passlook)
+			}
+		},
+		components:{
+			cool
+		}
+	})
+</script>
+</html>

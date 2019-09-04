@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>034-父组件向子组件传递方法.html</title>
+</head>
+<body>
+	<div id="app">
+		<cool @func="show"></cool>
+	</div>
+	<template id="tmpl">
+		<div>
+			<h1>这是子组件</h1>
+			<input type="button" value="点击触发父组件的方法" @click="mycilck">
+		</div>
+	</template>
+</body>
+<script src="js/vue.js"></script>
+<script>
+	var cool = {
+		template:"#tmpl",
+		data(){return{
+			some:{
+				bn:"lala"
+			}
+		}},
+		methods:{
+			mycilck(){
+				console.log('ok')
+				this.$emit('func',this.some)
+			}
+		}
+	}
+	var vm = new Vue({
+		el:"#app",
+		data:{
+			msg:"山河",
+			dispass:null
+		},
+		methods:{
+			show(data){
+				console.log('我被子组件调用----' + data)
+				console.log(data)
+				console.log(this.msg)
+				//保存到父组件上
+				this.dispass = data;
+				console.log(this.dispass)
+			}
+		},
+		components:{
+			cool
+		}
+	})
+</script>
+</html>
