@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>043-keyup名称案例.html</title>
+</head>
+<body>
+	<div id="app">
+		<input type="text" v-model="firstname" @keyup="getfullname">+
+		<input type="text" v-model="listname" @keyup="getfullname">=
+		<input type="text" v-model="fullname">
+	</div>
+</body>
+<script src="js/vue.js"></script>
+<script>
+	var vm = new Vue({
+		el:"#app",
+		data:{
+			firstname:"",
+			listname:'',
+			fullname:''
+		},
+		methods:{
+			getfullname(){
+				this.fullname = this.firstname +'--' +this.listname;
+			}
+		},
+	})
+</script>
+</html>

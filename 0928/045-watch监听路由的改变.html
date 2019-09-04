@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>045-watch监听路由的改变.html</title>
+</head>
+<body>
+	<div id="app">
+		<router-link to="/logon">登陆</router-link>
+		<router-link to="register">注册</router-link>
+
+
+		<router-view></router-view>
+	</div>
+</body>
+<script src="js/vue.js"></script>
+<script src="js/vue-router-3.0.1.js"></script>
+<script>
+	var logon = {
+		template:"<h1>这是山河</h1>"
+	}
+	var register = {
+		template:"<h1>这是情歌</h1>"
+	}
+
+	var router = new VueRouter({
+		routes:[
+			{path:"",redirect:"/logon"},
+			{path:"/logon",component:logon},
+			{path:"/register",component:register},
+		]
+	})
+
+
+
+
+
+
+
+
+	var vm = new Vue({
+		el:"#app",
+		data:{},
+		methods:{},
+		router:router,
+		watch:{
+			'$route.path':function(newval,oldval){
+				if(newval === "/logon"){
+					console.log("欢迎来到登陆页面")
+				}else if(newval === "/register"){
+					console.log("欢迎来到注册页面")
+				}
+			}
+		}
+	})
+</script>
+</html>

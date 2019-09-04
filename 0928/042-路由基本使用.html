@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>042-路由基本使用.html</title>
+</head>
+<body>
+	<div id="app">
+		<router-link to="/logon">登陆</router-link>
+		<router-link to="register">注册</router-link>
+
+
+		<router-view></router-view>
+	</div>
+</body>
+<script src="js/vue.js"></script>
+<script src="js/vue-router-3.0.1.js"></script>
+<script>
+	var logon = {
+		template:"<h1>这是山河</h1>"
+	}
+	var register = {
+		template:"<h1>这是情歌</h1>"
+	}
+
+	var router = new VueRouter({
+		routes:[
+			{path:"",redirect:"/logon"},
+			{path:"/logon",component:logon},
+			{path:"/register",component:register},
+		]
+	})
+
+
+
+
+
+
+
+
+	var vm = new Vue({
+		el:"#app",
+		data:{},
+		methods:{},
+		router:router
+	})
+</script>
+</html>

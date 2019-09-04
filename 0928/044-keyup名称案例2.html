@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>044-keyup名称案例2.html</title>
+</head>
+<body>
+	<div id="app">
+		<input type="text" v-model="firstname">+
+		<input type="text" v-model="listname">=
+		<input type="text" v-model="fullname">
+	</div>
+</body>
+<script src="js/vue.js"></script>
+<script>
+	var vm = new Vue({
+		el:"#app",
+		data:{
+			firstname:"",
+			listname:'',
+			fullname:''
+		},
+		methods:{
+			
+		},
+		watch:{
+			'firstname':function(newval,oldval){
+
+				// this.fullname = this.firstname + '--'+ this.listname
+				// 第一个参数newval代表自身
+				this.fullname = newval +'--'+this.listname
+			},
+			'listname':function(newval,oldval){
+				this.fullname = this.firstname +'--'+newval
+			}
+		}
+	})
+</script>
+</html>
