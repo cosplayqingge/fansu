@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>001-选项卡.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+		.task-li{
+			overflow: hidden;
+			width: 400px;
+		}
+		.task-li li{
+			float: left;
+			margin-right: 41px;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			margin-bottom: 10px;
+			box-sizing: border-box;
+			cursor: pointer;
+		}
+		.active{
+			border-bottom: 1px solid #ff6700;
+		}
+		.tasb-li li{
+			width: 400px;
+			height: 400px;
+			line-height: 400px;
+			text-align: center;
+			font-size: 20px;
+			font-weight: bolder;
+			border:1px solid #ccc;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<ul class="task-li">
+		<li class="active">山河</li>
+		<li>凡俗</li>
+		<li>神明</li>
+		<li>厌恶</li>
+		<li>顾北</li>
+		<li>听风</li>
+		<li>南辞</li>
+		<li>挽瀹</li>
+	</ul>
+	<ul class="tasb-li">
+		<li style="display: block;">1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+	</ul>
+</body>
+<script>
+	let aBtn = document.querySelectorAll(".task-li li");
+	let oBtn = document.querySelectorAll(".tasb-li li");
+
+	for(let i=0;i<aBtn.length;i++){
+		aBtn[i].onclick=function(){
+			for(let j=0;j<aBtn.length;j++){
+				aBtn[j].className = '';
+				oBtn[j].style.display="none";
+			}
+			aBtn[i].className = 'active';
+			oBtn[i].style.display='block';
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
