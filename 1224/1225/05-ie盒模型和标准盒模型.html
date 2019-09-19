@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>05-ie盒模型和标准盒模型.html</title>
+	<style type="text/css">
+		.box{
+			width: 100px;
+			height: 100px;
+			background: red;
+			border:1px solid #ff6700;
+			box-sizing: content-box;
+		}
+
+		.son{
+			width: 100px;
+			height: 100px;
+			background: red;
+			margin-top: 20px;
+			border:1px solid #ff6700;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<div class="son"></div>
+</body>
+</html>
