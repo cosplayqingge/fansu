@@ -1,0 +1,211 @@
+/*共同样式*/
+body{
+	background: #f3f5f7;
+}
+li {
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: #050505;
+}
+.clearfix:before, cleaarfix:after {
+	display: table;
+	content: "",
+}
+.clearfix:after{
+	clear: both;
+}
+.clearfix {
+	*zoom:1;
+}
+
+
+/*头部样式*/
+.header{
+	height: 100px;
+	overflow: hidden;
+}
+.nav{
+	width: 1366px;
+	height: 42px;
+	margin: 26px auto;
+}
+.logo{
+	float: left;
+	margin-right: 30px;
+}
+.navbar{
+	float: left;
+	height: 42px;
+}
+.navbar ul li{
+	float: left;
+	line-height: 42px;
+}
+.navbar ul li a{
+	padding: 0 8px;
+	display: block;
+	height: 42px;
+}
+.navbar ul li a:hover{
+	border-bottom:2px solid #00a4ff;
+}
+/*搜索框*/
+.search{
+	float: right;
+	width: 410px;
+	height: 38px;
+	border:1px solid #00a4ff;
+	box-sizing: border-box;
+}
+.search-aa{
+	float: left;
+	width: 338px;
+	height: 34px;
+	padding-left: 20px;
+	border:none;
+}
+.search-bb{
+	float: left;
+	width: 50px;
+	height: 37px;
+	border:none;
+	background: #00a4ff url(../images/search_06.png) center center no-repeat;
+}
+.person{
+	float: right;
+	height: 42px;
+	line-height: 42px;
+	margin: 0 15px 0 35px;
+}
+.person img {
+	margin: 0 8px;
+}
+
+
+
+
+/*公共样式*/
+.container{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+
+/*banner部分*/
+.banner{
+	height: 420px;
+	background: #1c036c;
+}
+.banner-in{
+	height: 420px;
+	background:  url(../images/banner_03.png) 0 0 no-repeat;
+}
+.slidebar{
+	width: 190px;
+	height: 420px;
+	background: rgba(0, 0, 0, 0.3);/*  盒子背景半透明 */
+	float: left;
+}
+.slidebar li a{
+	color: #fff;
+	font-size: 14px;
+	padding: 1px 20px;
+	display: block;
+	height: 45px;
+	line-height: 45px;
+}
+.slidebar li a span{
+	float: right;
+}
+.slidebar li a:hover{
+	color: #00a4ff;
+}
+
+
+/*小课表部分*/
+.timertable{
+	float: right;
+	width: 230px;
+	height: 300px;
+	background: #fff;
+	margin-top: 50px;
+}
+.timertable dt{
+	height: 50px;
+	background: #9bceaa;
+	text-align: center;
+	line-height: 50px;
+	font-size: 16px;
+	color: #fff;
+	font-weight: bold;
+	letter-spacing: 2px;
+	margin-bottom: 5px;
+}
+.timertable dd{
+	width: 193px;
+	height: 60px;
+	background: #fff;
+	margin: 0 auto;
+	border-bottom: 1px solid #ccc;
+	padding-top: 12px;
+	box-sizing: border-box;
+}
+.timertable dd h4{
+	font-size: 16px;
+	font-weight: normal;
+	color: #4e4e4e;
+}
+.timertable dd p{
+	color: #a5a5a5;
+}
+.timertable dd:last-child{
+	border: none;
+}
+.timertable dd a{
+	height: 38px;
+	border:1px solid #00a4ff;
+	display: block;
+	text-align: center;
+	line-height: 38px;
+	color: #00a4ff;
+	font-weight: bold;
+}
+.timertable dd a:hover{
+	background:  #00a4ff;
+	color: #fff;
+}
+
+/*精品推荐*/
+.recommed{
+	height: 60px;
+	line-height: 60px;
+	background: #fff;
+	margin-top: 8px;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.2)
+}
+.recommed a{
+	padding: 0 30px;
+	border-right: 1px solid #ccc;
+}
+.recommed a:first-child{
+	color: #00a4ff;
+}
+.recommed a:hover{
+	color: #00a4ff;
+}
+.recommed a:last-child {
+	color: #00a4ff;
+	border-right: none;
+	float: right;
+	font-size: 14px;
+
+}
+
+
+
+
+
+
