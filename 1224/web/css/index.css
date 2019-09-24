@@ -10,15 +10,15 @@ a{
 	text-decoration: none;
 	color: #050505;
 }
-.clearfix:before, cleaarfix:after {
+.clearfix:before, .clearfix:after {   /* 清除浮动 */
 	display: table;
-	content: "",
+	content: "";
 }
-.clearfix:after{
+.clearfix:after {
 	clear: both;
 }
 .clearfix {
-	*zoom:1;
+	*zoom: 1;
 }
 
 
@@ -98,6 +98,7 @@ a{
 .banner{
 	height: 420px;
 	background: #1c036c;
+	position: relative;
 }
 .banner-in{
 	height: 420px;
@@ -123,6 +124,83 @@ a{
 .slidebar li a:hover{
 	color: #00a4ff;
 }
+/*小圆点*/
+.banner .clrcle{
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	margin-left: -100px;
+	width: 200px;
+	height: 40px;
+	background: red;
+	background: rgba(255,255,255,0.3);
+	border-radius: 9px;
+}
+.banner .clrcle li{
+	float: left;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin-top: 15px;
+	margin-left: 20px;
+	background: rgba(255,255,255,0.4);
+}
+.banner .clrcle .current{
+	width: 19px;
+	border-radius: 5px;
+	background: #fff;
+} 
+
+
+/*下半部分头部*/
+.recom-product{
+	margin-top: 20px;
+}
+.recom-hd {
+	height: 30px;
+}
+.recom-hd h4{
+	float: left;
+	font-size: 16px;
+}
+.recom-hd a{
+	float: right;
+	margin-right: 25px;
+	font-size: 16px;
+	margin-top: 5px;
+}
+/*下半部分主体*/
+.recom-bd ul li{
+	float:left;
+	margin-right:15px;
+	width: 228px;
+	height: 270px;
+	background: #fff;
+	overflow: hidden;
+	box-shadow: 2px 4px 5px rgba(0,0,0,0.4);
+	margin-top: 10px;
+}
+.recom-bd ul li:nth-child(5n){
+	margin-right: 0px;
+}
+.recom-bd li h5,
+.recom-bd li p{
+	padding: 0 20px 0 24px;
+	margin-top: 15px;
+}
+.recom-bd li h5 {
+	font-weight: normal;
+}
+.recom-bd li p {
+	font-size: 12px;
+	color: #999;
+}
+.recom-bd li p span{
+	color: #ff7c2b;
+}
+
+
+
 
 
 /*小课表部分*/
@@ -204,8 +282,55 @@ a{
 
 }
 
+/*底部*/
+footer{
+	height: 270px;
+	background: #fff;
+	margin-top: 100px;
+}
+.footer-in {
+	padding-top: 30px;
 
-
-
+}
+.footer-l {
+	float: left;
+}
+.footer-l p {
+	font-size: 12px;
+	line-height: 18px;
+	color: #999;
+	margin-top: 20px;
+}
+.footer-l a {
+	display: block;
+	width: 118px;
+	height: 33px;
+	border: 1px solid #00a4ff;
+	font-size: 16px;
+	color: #00a4ff;
+	text-align: center;
+	line-height: 33px;
+	margin-top: 15px;
+}
+.footer-r {
+	float: right;
+	color: #333;
+}
+.footer-r dl {
+	float: left;
+	width: 225px;
+}
+.footer-r dt {
+	font-size: 16px;
+	height: 30px;
+}
+.footer-r dd {
+	font-size: 12px;
+	height: 20px;
+}
+.footer-r dd a:hover {
+	color: #00a4ff;
+	text-decoration: underline; /*  添加下划线 */
+}
 
 
