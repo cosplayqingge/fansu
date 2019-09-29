@@ -1,3 +1,7 @@
+img{
+	vertical-align: top;   /*图片顶端对齐*/
+}
+
 .w{     /*版心*/
 	width: 1190px;  /* 京东的版心是 1190 */  
 	margin: 0 auto; 
