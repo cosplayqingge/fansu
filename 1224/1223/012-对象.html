@@ -19,6 +19,21 @@
 	// console.log(student.name)
 	// console.log(student.sayhi())
 
-	
+	var dog = {
+		name:"虎子",
+		type:"中华田园犬",
+		age:2,
+		color:'yellow',
+		bark: function(){
+			console.log(this.name + '汪汪汪')
+		},
+		eat:function(){
+			console.log(this.name + "啃骨头")
+		}
+	}
+	console.log(dog.name);
+	console.log(dog.type);
+	dog.bark();
+	dog.eat();
 </script>
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>014-遍历对象 删除对象属性.html</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	// var obj = {
+	// 	name:"tom",
+	// 	age:18,
+	// 	sex:"打豆豆",
+	// 	sayHi:function(){
+	// 		console.log('lalala')
+	// 	}
+	// }
+	// for(var key in obj){
+	// 	console.log(key + '----'+obj[key]);
+	// }
+
+	// var n1 = 10;
+	// var n2 = n1;
+	// console.log(n1);
+	// console.log(n2);
+	// n1 = 20;
+	// console.log(n1);
+	// console.log(n2)
+	function Student(name,age,score){
+		this.name = name;
+		this.age = age;
+		this.score = score;
+		this.sayHi = function(){
+			console.log('hellow')
+		}
+	}
+	var s1 = new Student('情歌',18,100);
+	var s2 = s1;
+
+	s1.name = "山河";
+	console.log(s1)
+	console.log(s2)
+</script>
+</html>
