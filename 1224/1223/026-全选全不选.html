@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="cont">
+		<input type="checkbox" >
+		<input type="checkbox" >
+		<input type="checkbox" >
+		<input type="checkbox" >
+		<input type="checkbox" >
+		<input type="checkbox" >
+		<input type="checkbox" >
+		<input type="checkbox" >
+	</div>
+	
+	<input type="button" id="btn" value="全选">
+	<input type="button" id="box" value="全不选">
+	<input type="button" id="sex" value="反选">
+</body>
+<script type="text/javascript">
+	//获取checkbox属性的input标签
+	var oCont = document.getElementById('cont');
+	var input = oCont.getElementsByTagName('input');
+	// console.log(input)
+
+	//1.全选
+	var aBtn = document.getElementById('btn');
+	aBtn.onclick = function(){
+		for(var i = 0;i < input.length; i++){
+			var inputs = input[i];
+			inputs.checked  = true;
+		}
+	}
+ 
+ 	//2.全不选
+ 	var oBox = document.getElementById('box');
+ 	oBox.onclick = function(){
+		for(var i = 0;i < input.length; i++){
+			var inputs = input[i];
+			inputs.checked  = false;
+		}
+	}
+
+	//3.反选
+	var aSex = document.getElementById('sex');
+	aSex.onclick = function(){
+		for(var i = 0;i < input.length; i++){
+			var inputs = input[i];
+			if(inputs.checked  == true){
+				inputs.checked  = false;
+			}else {
+				inputs.checked  = true;
+			}
+		}
+	}
+</script>
+</html>

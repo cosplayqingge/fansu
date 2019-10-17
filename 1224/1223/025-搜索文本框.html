@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>025-搜索文本框.html</title>
+	<style>
+    .gray {
+      color: gray;
+    }
+
+    .black {
+      color: black;
+    }
+  </style>
+</head>
+<body>
+	 <input type="text" class="gray" value="请输入搜索关键字" id="txtSearch"> 
+  <input type="button" value="搜索" id="btnSearch">
+</body>
+<script type="text/javascript">
+	// 当文本框获得焦点，如果文本框里的内容是  请输入搜索关键字 清空文本框，并且让字体变为黑色
+	var txt = document.getElementById('txtSearch');
+	txt.onfocus = function(){
+		if(this.value === '请输入搜索关键字'){
+			this.value = '';
+			this.className = 'black';
+		}
+	}
+
+	// 当文本框失去焦点，如果文本框里的内容为空  还原文本框里的文字，并且让字体变为灰色
+    // 失去焦点的事件  blur
+    txt.onblur = function(){
+    	if(this.value == '' || this.value == '请输入搜索关键字'){
+    		this.value = '请输入搜索关键字';
+    		this.className = 'gray';
+    	}
+    }
+</script>
+</html>

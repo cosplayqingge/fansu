@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>027-样式操作.html</title>
+</head>
+<body>
+	<input type="button"  id="btn" value="切换">
+	<br>
+	<img src="images/5.jpg" id="mv">
+</body>
+<script type="text/javascript">
+	var aBtn = document.getElementById('btn');
+	var mv = document.getElementById('mv');
+
+	var flag = 1;
+	aBtn.onclick = function(){
+		if(flag == 1){
+			mv.src = 'images/6.jpg';
+			flag = 2;
+		}else if(flag == 2){
+			mv.src = 'images/5.jpg';
+			flag = 1;
+		}
+		
+	}
+</script>
+</html>

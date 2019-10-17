@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>029-隔行变色和高亮显示.html</title>
+	<style type="text/css">
+		.ls{
+			background: red;
+		}
+		.pl{
+			background: blue;
+		}
+		.ss{
+			background: pink;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="隔行变色" id="btn" name="">
+	<ul id="cont">
+		<li>山河</li>
+		<li>情歌</li>
+		<li>众生</li>
+		<li>凡俗</li>
+		<li>深渊</li>
+		<li>星河</li>
+		<li>神明</li>
+		<li>万物</li>
+	</ul>
+</body>
+<script type="text/javascript">
+	var aBtn = document.getElementById('btn');
+	var oCont = document.getElementById('cont');
+	var oLi = oCont.getElementsByTagName('li');
+
+	aBtn.onclick = function(){
+		for (var i = 0; i < oLi.length; i++) {
+			var aLi = oLi[i];
+			if(i % 2 === 0){
+				aLi.className = 'ls'
+			}else {
+				aLi.className = 'pl'
+			}
+		}
+	}
+
+
+	for(var i = 0;i<oLi.length;i++){
+		var aLi = oLi[i];
+		var bg;
+		
+		aLi.onmouseover = function(){
+			bg = this.className;//存储原来的颜色
+			this.className = 'ss';
+		}
+		aLi.onmouseout = function (){
+			this.className = bg;
+		}
+	}
+</script>
+</html>
