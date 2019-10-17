@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>022-给文本框赋值.html</title>
+</head>
+<body>
+	<input type="text"><br>
+	<input type="text"><br>
+	<input type="text"><br>
+	<input type="text"><br>
+	<input type="text"><br>
+	<input type="text"><br>
+	<input type="text"><br>
+	<input type="text"><br>
+	<input type="text"><br>
+	<input type="text"><br>
+	<input type="button" id="btn" value="获取文本框的值">
+</body>
+<script type="text/javascript">
+	var inputs = document.querySelectorAll('input');
+	console.log(inputs);
+	for(var i = 0;i<inputs.length;i++){
+		var input = inputs[i];
+		if(input.type === 'text'){
+			input.value = i;
+		}
+	}
+
+	var aBtn = document.getElementById('btn');
+	aBtn.onclick = function(){
+		// var s = '';
+		var array = [];
+		for(var i = 0;i<inputs.length;i++){
+			var input = inputs[i];
+			if(input.type === 'text'){
+				// s = s + input.value + '|'
+				array.push(input.value)
+			}
+		}
+		// console.log(s)
+		// s = s.substr(0,s.length - 1)
+		// console.log(s)
+		console.log(array);
+		console.log(array.join('|'));
+	}
+</script>
+</html>

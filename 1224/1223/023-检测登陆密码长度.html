@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 <style>
+    .bg {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+	<input type="text" id="txtUserName"> <br>
+    <input type="password" id="txtUserPassword"> <br>
+    <input type="button" value=" 登 录 " id="btnLogin">
+</body>
+<script type="text/javascript">
+	var aUname = document.getElementById('txtUserName');
+	var aPassword = document.getElementById('txtUserPassword');
+	var aBtn = document.getElementById('btnLogin');
+	aBtn.onclick = function(){
+		if(aUname.value.length < 3 || aUname.value.leng < 6){
+			aUname.className = 'bg';
+			return;
+		}else {
+			aUname.className = '';
+		}
+
+		if(aPassword.value.length < 6 || aPassword.value.length > 8 ){
+			aPassword.className = 'bg';
+			return;
+		}else{
+			aPassword.className = '';
+		}
+		console.log('执行登录');
+	}
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>024-设置下拉框中的选项.html</title>
+</head>
+<body>
+	<input type="button" value="设置" id='btnSet'>
+  	<select id="selCities">
+    	<option value="1">北京</option>
+    	<option value="2">上海</option>
+   		<option value="3">杭州</option>
+   	 	<option value="4">郑州</option>
+    	<option value="5">武汉</option>
+    	<option value="6">深渊</option>
+  	</select>
+</body>
+<script type="text/javascript">
+	var aBtn = document.getElementById('btnSet');
+	aBtn.onclick = function(){
+		var sel = document.getElementById('selCities');
+		var options = sel.getElementsByTagName('option');
+		var random = parseInt(Math.random()*options.length);
+		var option = options[random];
+		option.selected = true;
+	}
+
+</script>
+</html>
