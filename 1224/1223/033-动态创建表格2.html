@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>033-动态创建表格2.html</title>
+</head>
+<body>
+	<div id="box">
+		
+	</div>
+</body>
+<script type="text/javascript">
+	var datas = [
+		{name:"zs",subject:"语文",score:90},
+		{name:"ls",subject:"数学",score:60},
+		{name:"ww",subject:"英语",score:70},
+		{name:"wc",subject:"历史",score:100},
+		{name:"lx",subject:"政治",score:78},
+		{name:"jk",subject:"化学",score:56},
+		{name:"uz",subject:"物理",score:79},
+		{name:"cz",subject:"生物",score:80}
+	];
+
+
+	var oBox = document.getElementById('box')
+
+	//1创建table元素
+	var table = document.createElement('table');
+	oBox.appendChild(table);
+
+	//2创建表头
+	var thead = document.createElement('thead');
+	table.appendChild(thead);
+
+	var tr = document.createElement('tr')
+	thead.appendChild(tr)
+
+	var th = document.createElement('th');
+	tr.appendChild(th);
+
+	th.innerText = "姓名";
+
+	th = document.createElement('th');
+    tr.appendChild(th);
+   	th.innerText = "科目";
+
+    th = document.createElement('th');
+    tr.appendChild(th);
+    th.innerText = "成绩";
+    
+
+
+	//创建数据
+
+
+
+
+
+
+
+
+</script>
+</html>

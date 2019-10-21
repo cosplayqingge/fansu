@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>032-动态创建元素1.html</title>
+</head>
+<body>
+	<input type="button" value="按钮" id="btn" name="">
+	<div id="box"></div>
+</body>
+<script type="text/javascript">
+	var aBtn = document.getElementById('btn');
+	var oBox = document.getElementById('box'); 
+
+
+
+	aBtn.onclick = function(){
+		var datas = ["貂蝉","西施","王昭君","上官","安琪拉"];
+		var ul = document.createElement('ul');
+		oBox.appendChild(ul);
+
+		for(var i = 0;i<datas.length;i++){
+			var data = datas[i];
+			var li = document.createElement('li');
+			ul.appendChild(li);
+
+			li.innerText = data;
+
+			li.onmouseover = gl;
+       		li.onmouseout = hy;
+		}
+
+		function gl(){
+			 this.style.backgroundColor = 'red';
+		}
+		function hy(){
+			this.style.backgroundColor = '';
+		}
+
+
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

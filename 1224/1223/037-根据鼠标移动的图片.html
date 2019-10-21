@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>037-根据鼠标移动的图片.html</title>
+	<style type="text/css">
+		#ts{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<img src="images/5.jpg" id="ts">
+</body>
+<script type="text/javascript">
+	var ts = document.getElementById('ts');
+	document.onmousemove = function(e){
+		ts.style.left = e.pageX - 10 + 'px';//减10 的含义是让图片在鼠标正中间
+		ts.style.top = e.pageY  - 10 + 'px';
+	}
+</script>
+</html>
