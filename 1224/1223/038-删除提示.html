@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>038-删除提示.html</title>
+	 <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #tip {
+      width: 150px;
+      height: 30px;
+      background-color: lightgray;
+      opacity: 0.5;
+      margin:200px auto;
+      padding-top: 5px;
+      text-align: center;
+      color: red;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+	<input type="button" id="btn" value="删除">
+  	<div id="tip">删除成功</div>
+</body>
+<script type="text/javascript">
+	var oBtn = document.getElementById('btn');
+	oBtn.onclick = function(){
+		var tip = document.getElementById('tip');
+		tip.style.display = 'block';
+		setTimeout(function(){
+			tip.style.display = 'none';
+			console.log(this)
+		},3000)
+
+
+
+
+	}
+
+
+
+
+</script>
+</html>
