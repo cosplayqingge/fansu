@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>043-scroll相关值.html</title>
+	<style>
+    body {
+      margin: 0;
+    }
+
+    #box {
+      width: 100px;
+      height: 100px;
+      margin: 50px;
+      border: 30px solid red;
+      padding: 10px;
+      background-color: green;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+	 <div id="box">
+    小明跟小华到动物园玩，进门时，小明指着小华对看门人说：“看清楚喔！等会儿出来，别说我偷了你们的猴子！” 
+  </div>
+</body>
+<script type="text/javascript">
+	var oBox = document.getElementById('box');
+	oBox.onscroll = function(){
+		console.log(oBox.scrollLeft)
+		console.log(oBox.scrollTop)
+	}
+	console.log(oBox.scrollLeft)
+	console.log(oBox.scrollTop)
+	console.log(box.scrollWidth)
+	console.log(box.scrollHeight)
+</script>
+</html>
