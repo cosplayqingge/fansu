@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>040-动画.html</title>
+	<title>047-动画2.html</title>
 	<style>
     body {
       margin: 0;
@@ -22,19 +22,29 @@
 <script type="text/javascript">
 	var aBtn = document.getElementById('btn');
 	var oBox = document.getElementById('box');
+
 	aBtn.onclick = function(){
 
 		var timer = setInterval(function(){
-			var trage = 600;
-			if(oBox.offsetLeft >= trage){
-				clearInterval(timer);
-				oBox.style.left = trage + 'px';
-				console.log(oBox.style.left)
-				return;
+			if(oBox.offsetLeft >= 600){
+				clearInterval(timer)
+				oBox.style.left = 600 + 'px';
+				return
 			}
+
+
+
+
+
+
+
 			oBox.style.left = oBox.offsetLeft + 5 + 'px';
 
-		},30)
+
+		},30);
+		
 	}
+
+
 </script>
 </html>

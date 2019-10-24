@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>011-轮播图.html</title>
+	<title>048-轮播图.html</title>
 <style>
 		*{
 			margin: 0;
@@ -91,25 +91,29 @@
 		</ul>
 	</div>	
 </body>
-<script>
+<script type="text/javascript">
 	var aImg = document.querySelectorAll('.carousel-imgs-item');
-	var aRight = document.querySelector('.right-arrow');
 	var aLeft = document.querySelector('.left-arrow');
-	var aBtn = document.querySelector('.carousel-btn').children;
-	var aCant = document.querySelector('.carousel');
-	var timer = 0;
+	var aRight = document.querySelector('.right-arrow');
+	var oCarouse = document.querySelector('.carousel-btn');
+	var aBtn = oCarouse.children;
 
 	var now = 0;
+
 	function tab(){
 		for(var i = 0;i<aImg.length;i++){
 			aImg[i].style.zIndex = '0';
-			aImg[i].style,opacity = '0';
 			aBtn[i].className = '';
+			aImg[i].style.opacity = '0';
+
 		}
 		aImg[now].style.zIndex = '99';
-		aImg[now].style,opacity = '1';
 		aBtn[now].className = 'active';
+		aImg[now].style.opacity = '1';
 	}
+
+
+
 	aRight.onclick = function(){
 		now++;
 		if(now >= aImg.length){
@@ -117,6 +121,7 @@
 		}
 		tab();
 	}
+
 	aLeft.onclick = function(){
 		now--;
 		if(now < 0){
@@ -124,16 +129,14 @@
 		}
 		tab();
 	}
-
+	
 	for(var i = 0;i<aBtn.length;i++){
-		// aBtn[i].index = i; 
-		var btn = aBtn[i];
-		btn.onclick = function(){
+		aBtn[i].index = i;
+		aBtn[i].onclick = function(){
 			now = this.index;
-			tab()
+			tab();
 		}
 	}
-
 
 	timer = setInterval(aRight.onclick,1000);
 	aCant.onmouseover = function(){
@@ -142,12 +145,6 @@
 	aCant.onmouseout = function(){
 		timer = setInterval(aRight.onclick,1000);
 	}
-
-
-
-
-
-
 
 
 
