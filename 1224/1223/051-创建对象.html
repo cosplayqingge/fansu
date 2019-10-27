@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>051-创建对象.html</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	// var hero = new Object();
+	// hero.spot = 100;
+	// hero.name = '刘备';
+	// hero.weapon = '剑';
+
+	// hero.actor = function(){
+	// 	console.log(this.weapon + "攻击敌人");
+	// }
+	// console.log(hero.spot);
+	// console.log(hero)
+	// hero.actor();
+
+	//2 .字面量创建
+	// var hero = {
+	// 	blood:100,
+	// 	name:"刘备",
+	// 	weapon:'剑',
+	// 	actor:function(){
+	// 		console.log(this.weapon + "攻击敌人");
+	// 	}
+	// };
+	// console.log(hero);
+	// console.log(hero.spot);
+	// hero.actor();
+
+	//3. 工厂函数
+	function creat(blood,name,weapon){
+		var o = new Object();
+		o.name = name;
+		o.blood = blood;
+		o.weapon = weapon;
+		o.actor = function(){
+			console.log(this.weapon + "攻击敌人");
+		}
+		return o;//需要返回
+	}
+	var s1 = creat(100,"刘备",'剑');
+	console.log(s1)
+</script>
+
+</html>

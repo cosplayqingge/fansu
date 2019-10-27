@@ -97,7 +97,6 @@
 	var aRight = document.querySelector('.right-arrow');
 	var oCarouse = document.querySelector('.carousel-btn');
 	var aBtn = oCarouse.children;
-
 	var now = 0;
 
 	function tab(){
@@ -105,7 +104,6 @@
 			aImg[i].style.zIndex = '0';
 			aBtn[i].className = '';
 			aImg[i].style.opacity = '0';
-
 		}
 		aImg[now].style.zIndex = '99';
 		aBtn[now].className = 'active';

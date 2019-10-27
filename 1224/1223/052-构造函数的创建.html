@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>052-构造函数的创建.html</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	function Hero(name,blood,weapon){
+		this.name = name;
+		this.blood = blood;
+		this.weapon = weapon;
+		this.actor = function(){
+			console.log(this.weapon + "攻击敌人");
+		}
+	}
+	var hero = new Hero('刘备',100,'剑');
+	console.log(hero);
+	hero.actor();
+</script>
+</html>
