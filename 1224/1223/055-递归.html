@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>055-递归.html</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	function fn1 () {
+		console.log(111)
+		fn2()
+		console.log('fn1')
+	}
+
+	function fn2 () {
+		console.log(222)
+		fn3()
+		console.log('fn2')
+	}
+
+	function fn3 () {
+		console.log(333)
+		fn4()
+		console.log('fn3')
+	}
+
+	function fn4 () {
+		console.log(444)
+		console.log('fn4')
+	}
+
+	fn1()
+
+	// console.log(1)
+	// setTimeout(()=>console.log(2),0)
+	// console.log(3)
+</script>
+</html>
