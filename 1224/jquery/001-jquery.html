@@ -3,17 +3,87 @@
 <head>
 	<meta charset="UTF-8">
 	<title>001-jquery.html</title>
+	<style type="text/css">
+		#box{
+			width: 100px;
+			height: 100px;
+			background: #ff6700;
+		}
+		.cls{
+			background: pink;
+		}
+	</style>
 </head>
 <body>
-	
+	<input type="button" name="" value="变颜色"  id="btn">
+	<div id="box"></div>
+
+	<input type="button" name="" value="p标签" id="asx">
+	<p>1</p>
+	<p>2</p>
+	<p>3</p>
+	<p>4</p>
+	<p>5</p>
+
+
+	<input type="button" name="" value="点击" id="nmo">
+	<span class="cls">天下</span>
+	<p class="cls">激动</p>
+
+	<input type="button" name="" value="点击设置li样式" id="pop">
+	<ul>
+		<li class="clss">鸣人</li>
+		<li class="clss">雏田</li>
+		<li class="clss">小樱</li>
+		<li class="clss">知世</li>
+		<li class="clss">十刀</li>
+	</ul>
+
+
+
+	<input type="button" name="" value="点击多条件" id="lpl">
+	<span>span标签</span>
+	<p>拉阿拉</p>
+	<div>快了</div>
+	<ul>
+		<li>mk</li>
+		<li>pink</li>
+	</ul>
 </body>
 <script src="js/jquery-1.12.4.js"></script>
 <script type="text/javascript">
-	
-
-
-
-
-	
+	//id选择器
+	$(function(){
+		$('#btn').click(function(){
+			$('#box').css("backgroundColor","pink");
+		})
+	})
+	//标签选择器
+	$(function(){
+		$('#asx').click(function(){
+			$('p').text('我们都是p')
+		});
+	})
+	//类选择器
+	$(function(){
+		$("#nmo").click(function(){
+			$(".cls").css("backgroundColor","blue");
+		})
+	})
+	//标签+类选择器
+	$(function(){
+		$("#pop").click(function(){
+			$("li.clss").css({
+				"backgroundColor":"blue",
+				"color":"red",
+			})
+		});
+	})
+	//多条件选择器
+	$(function(){
+		$("#lpl").click(function(){
+			$("span,div,li,p").css("backgroundColor","green")
+		});
+	})
 </script>
 </html>
