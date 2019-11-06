@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>005-ajax1.html</title>
+</head>
+<body>
+	<!-- 发送返回基本的ajax -->
+	<button id="btn">按钮获取数据</button>
+</body>
+<script type="text/javascript">
+	var oBtn = document.getElementById('btn');
+	oBtn.onclick = function(){
+		//1.生成aja对象 (客户端创建一个ajax对象(XMLHttpRequest对象))
+		var oAjax = new XMLHttpRequest()
+		console.log(oAjax);
+		//2.建立连接 (用ajax对象和服务端建立连接)
+		oAjax.open('GET','http://127.0.0.1:3000/004-data.json',true);
+		//3.发送请求 (用ajax对象发送请求到服务端)
+		oAjax.send();
+		//4.监听事件接收数据 (用ajax对象接收服务端返回的数据)
+		oAjax.onreadystatechange = function(){
+			if(oAjax.readyState == 4){
+				if(oAjax.status == 200){
+					try{
+						var obj = JSON.parse(oAjax.responseText);
+						console.log(obj.name);
+					}catch(e){
+						console.log(e);
+					}
+				}else{
+					console.log(oAjax.status)
+				}
+			}
+		}
+	}
+</script>
+</html>

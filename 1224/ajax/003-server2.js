@@ -1,3 +1,6 @@
+
+//可以相应并返回
+
 var http = require('http');
 var fs = require('fs');
 
@@ -5,6 +8,7 @@ var fs = require('fs');
 var server = http.createServer(function(req,res){
 	console.log(req.url);
 	var urlStr = req.url;
+	console.log("1:::",urlStr);
 	if(urlStr == '/favicon.ico'){
 		res.end("/favicon.ico")
 	}
@@ -13,6 +17,7 @@ var server = http.createServer(function(req,res){
 		if(!err){
 			res.end(data)
 		}else{
+			res.statusCode = 404;
 			res.end('nod Found')
 		}
 	})
