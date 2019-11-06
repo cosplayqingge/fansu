@@ -1,5 +1,6 @@
 
 //可以相应并返回
+//"GET请求"
 
 var http = require('http');
 var fs = require('fs');
