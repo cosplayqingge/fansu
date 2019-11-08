@@ -2,11 +2,22 @@
 * @Author: apple
 * @Date:   2017-09-17 18:58:47
 * @Last Modified by:   apple
-* @Last Modified time: 2017-09-20 23:01:31
+* @Last Modified time: 2017-09-24 14:12:41
 */
+html, body, .section {
+	min-height: 600px;
+	min-width: 1000px;
+	/* 最小的宽度和高度 防止 缩放过于变形 */
+}
 /* 8个背景样式 */
 #fp-nav ul li a span { /*  提高层叠性 */
 	background: #f40!important;
+}
+.next {
+	position: fixed;
+	bottom: 120px;
+	right: 10%;
+	z-index: 999;
 }
 /* 第一屏幕制作 start */
 .section1 {
@@ -174,6 +185,7 @@
 	bottom: 50px;
 	left: 50%;
 	transform: translateX(-50%);
+	z-index: 50;
 }
 .car-img {
 	position: absolute;
@@ -183,19 +195,197 @@
 	z-index: -1;  /* 负值 往下叠加 */
 	display: none;
 }
+.note {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: pink;
+	bottom: 180px;
+	display: none;
+}
+.note-img {
+	position: absolute;
+	top: 60px;
+	left: 60px;
+	opacity: 0;  /* 淡入淡出 opacity */
+}
 /* 第四屏幕制作 end */
+/* 第五屏幕制作 start */
 .section5 {
 	background: #d04759 url(../images/t1yisqfa4exxa3gmkg-2000-1500.png);
+	/* overflow: hidden; */
+	perspective: 500;
+	-webkit-perspective: 500;
+	z-index: 1;
 }
+.words-05 {
+	position: absolute;
+	left: 20%;
+	top: 10%;
+	opacity: 0;
+}
+
+.card-05 {
+	position: absolute;
+	left: 20%;
+	bottom: 200px;
+	z-index: 10;
+}
+.order-05 {
+	position: absolute;
+	left: 27%;
+	bottom: 270px;
+}
+.t1f-05 {
+	position: absolute;
+	bottom: 800px;
+	left: 25%;
+	display: none;
+}
+.mouse {
+	position: absolute;
+	right: 20%;
+	bottom: 200px;
+}
+.mouse-05-a {
+	opacity: 0;
+}
+.hand-05 {
+	position: absolute;
+	right: 24%;
+	bottom: -375px;
+}
+.overFlow {  /* 切掉 鼠标小尾巴 */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+/* 第五屏幕制作 end */
+/* 第6屏幕制作 start */
 .section6 {
 	background: #84d9ed url(../images/t1dvj.fn0gxxb0_fua-2500-600.png) no-repeat 25% 100%;
 }
+.box-06 {
+	position: absolute;
+	left:123px;
+	bottom: 500px;
+	z-index: 50;
+}
+.car-06 {
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+	z-index: 60;
+}
+.cloud-06 {
+	position: absolute;
+	left: 50%;
+	bottom: 550px;
+	animation: cloud6 30s;
+}
+@keyframes cloud6 {
+	50% {
+		left: 10%;
+	}
+}
+
+.pop-06 {
+	position: absolute;
+	bottom: 119px;
+	right: 48%;
+	display: none;
+	z-index: 50;
+}
+.boy {
+	right: 50%;
+	bottom: 0;
+	position: absolute;
+	height: 100px;
+}
+.girl {
+	position: absolute;
+	right: 315px;
+	bottom: 116px;
+	height: 123px;
+	display: none;
+	z-index: 50;
+}
+.door {
+	position: absolute;
+	right: 285px;
+	bottom: 116px;
+	opacity: 0;
+}
+.pop-07 {
+	position: absolute;
+	right:445px;
+	bottom: 400px;
+	z-index: 40;
+	display: none;
+}
+.words-06-a {
+	position: absolute;
+	left: 10%;
+	bottom: 479px;
+	display: none;
+}
+/* 第6屏幕制作 end */
+/* 第7屏幕制作 start */
 .section7 {
 	background: #8ac060 url(../images/t1wf1tfctaxxa3gmkg-2000-1500.png) no-repeat 50% 100%;
 }
+.star {
+	position: absolute;
+    left: 50%;
+    bottom: 439px;
+    margin-left: -295px;
+    width: 0;
+    height: 20px;
+    background: url(../images/star.png) no-repeat;
+    background-size: 97px;
+}
+.good-07 {
+	position: absolute;
+	bottom: 382px;
+    left: 50%;
+    margin-left: -289px;
+    display: none;
+
+}
+/* 第7屏幕制作 end */
+
+/* 第8屏幕制作 start */
 .section8 {
 	background: url(../images/ksgw.png);
 }
+.beginShoping {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom:365px;
+}
+.btn-08-a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.again {
+	position: absolute;
+	bottom: 403px;
+	left: 50%;
+	margin-left: 240px;
+	cursor: pointer;
+}
+.hand-08 {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+}
+/* 第8屏幕制作 end */
 /* 直接进入购物中心 */
 .go {
 	position: fixed;
@@ -205,7 +395,20 @@
 }
 
 /* 动画组 */
+.next_undown {
+	   animation: next .6s linear infinite ;  /*  linear 匀速 */
 
+}
+@keyframes next {  /* 类似于js 的声明函数 function */
+	
+	50% {
+
+	  bottom: 100px;
+	}
+	100% {
+      bottom: 120px;
+	}
+ }
 .updown {  /*  类似于 js  调用函数 */ 
    animation: fly 3s linear infinite ;  /*  linear 匀速 */
 }
@@ -251,3 +454,13 @@
  	}
  }
 
+.words-05-a {
+	animation: words5 3s forwards;
+	/* animation-fill-mode: forwards;  让我们的动画保持最后一帧状态 不循环 */
+}
+@keyframes words5 {
+	100% {
+		opacity: 1;
+		transform: translateZ(100px) rotateY(360deg);
+	}
+}
