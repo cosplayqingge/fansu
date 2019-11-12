@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	//体积
+	function xy(x,y){
+		return  Math.floor(Math.PI * 100) / 100*x*x*y;//π*半径的平方*高
+	}
+	var a = xy(5,6);
+	console.log(a);
+	//面积
+	function mianji(x){
+   		return Math.floor(Math.PI * 100) / 100*x*x;
+	}
+	var b = mianji(2);
+	console.log(b)
+
+
+	
+//质数（Prime number），又称素数，指在大于1的自然数中，除了1和该数自身外，无法被其他自然数整除的数（也可定义为只有1与该数本身两个正因数的数）。大于1的自然数若不是素数，则称之为合数（也称为合成数）。
+function isPrimeNumber(number){
+    if(number <= 1 || number%1 !== 0){//
+	    return false;
+    }
+    var n = 2;
+    while (n < (number/2)+1){，
+	    if (number%n == 0) {
+	        return false;
+	    }else{
+	        n++;
+	        continue;
+	    }
+    }
+    return true;
+}
+
+</script>
+</html>
