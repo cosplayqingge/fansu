@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>03-父组件向子组件传值.html</title>
+</head>
+<body>
+	<div id="app">
+		<!-- <p>{{ msg }}</p> -->
+		<!-- <cool v-bind:qingge ="msg"></cool> -->
+		<cool v-bind:qingge ="msg"></cool>
+	</div>
+
+	<template id="temp">
+		<div>
+			<h1>这是子组件 11-- {{ qingge }}</h1>
+		</div>
+	</template>
+</body>
+<script src="js/vue.js"></script>
+<script type="text/javascript">
+	let vm = new Vue({
+		el:"#app",
+		data:{
+			msg:"这是父组件"
+		},
+		methods:{
+			
+		},
+		components:{
+			cool:{
+				template:"#temp",
+				// template:"<h1>这是子组件 -- {{ qingge }}</h1>",
+				props:['qingge']
+			}
+			
+		}
+	})
+
+
+
+
+
+</script>
+</html>

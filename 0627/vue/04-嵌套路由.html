@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>04-嵌套路由.html</title>
+</head>
+<body>
+	<div id="app">
+		<router-link to="/account">account</router-link>
+
+		<router-view></router-view>
+	</div>
+
+
+
+
+
+	<template id="account">
+		<div>
+			<h1>这是account组件</h1>
+			<router-link to="/account/login">登录</router-link>
+			<router-link to="/account/resget">注册</router-link>
+			<router-view></router-view>
+		</div>
+	</template>
+
+
+	<template id="login">
+		<div>
+			这是login组件
+		</div>
+	</template>
+	<template id="resget">
+		<div>
+			这是resget组件
+		</div>
+	</template>
+</body>
+<script src="js/vue.js"></script>
+<script src="js/vue-router-3.0.1.js"></script>
+<script type="text/javascript">
+	var account = {
+		template:"#account"
+	}
+	var login = {
+		template:"#login"
+	}
+	var resget = {
+		template:"#resget"
+	}
+
+
+	var router = new VueRouter({
+		routes:[
+			{
+				path:"/account",
+				component:account,
+				children: [
+            		{ path: 'login', component: login },
+           			{ path: 'resget', component: resget }
+          ]
+		},
+
+
+		]
+	})
+
+
+
+
+	var vm = new Vue({
+		el:"#app",
+		data:{},
+		methods:{},
+		router:router
+	})	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
