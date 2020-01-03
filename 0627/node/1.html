@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	.box {
+      width: 300px;
+      height: 300px;
+      background: silver;
+      margin: 80px auto;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top,
+    .middle,
+    .bottom {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+	</style>
+</head>
+<body>
+	<div class="box">
+    <div class="top">
+      <div class="left">1</div>
+      <div class="center">2</div>
+      <div class="right">3</div>
+    </div>
+    <div class="middle">
+      <div class="left">4</div>
+      <div class="center">5</div>
+      <div class="right">6</div>
+    </div>
+    <div class="bottom">
+      <div class="left">7</div>
+      <div class="center">8</div>
+      <div class="right">9</div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+ //  var str = 'aacbd' ;
+ //  function fn(str) {
+ //  	let res = str.replace(/b+/g, '');
+ //  	while(res.match(/(ac)+/)) {
+ //  		res = res.replace(/ac/, '')
+ //  	}
+ //  	return res;
+ //  }
+ // var s1 = fn(str)
+ // console.log(s1)
+</script>
+</html>

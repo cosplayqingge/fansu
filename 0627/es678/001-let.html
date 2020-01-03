@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>001-let.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+		.box{
+			overflow: hidden;
+			margin-bottom: 20px;
+		}
+		.box li{
+			float: left;
+			margin-left: 20px;
+			width: 40px;
+			height: 30px;
+			cursor: pointer;	
+		}
+		.son .son1{
+			width: 300px;
+			height:100px;
+			border:1px solid black;
+			display: none;
+		}
+		.active{
+			border-bottom:2px solid #ff6700;
+		}
+	</style>
+</head>
+<body>
+	<ul class="box">
+		<li class="active">拜托</li>
+		<li>山河</li>
+		<li>神明</li>
+		<li>过客</li>
+	</ul>
+	<ul class="son">
+		<li class="son1" style="display: block">1</li>
+		<li class="son1">2</li>
+		<li class="son1">3</li>
+		<li class="son1">4</li>
+	</ul>
+</body>
+<script type="text/javascript">
+	let aBtn = document.querySelectorAll('.box li');
+	let aSon = document.querySelectorAll('.son li');
+	console.log(aBtn);
+	console.log(aSon);
+	for(let i = 0;i<aBtn.length;i++){
+		aBtn[i].onclick = function(){
+			for(let j = 0;j<aSon.length;j++){
+				aBtn[j].className = '';
+				aSon[j].style.display = 'none'
+			}
+			aBtn[i].className = 'active';
+			aSon[i].style.display = 'block';
+		}
+	}
+</script>
+</html>
